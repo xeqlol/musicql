@@ -1,0 +1,24 @@
+{
+  "name": "musicql",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-koa": "^1.3.2",
+    "babel-core": "^6.26.0",
+    "babel-preset-node5": "^12.0.1",
+    "graphql": "^0.12.3",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0",
+    "sequelize": "^4.31.0",
+    "sqlite3": "^3.1.13"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  },
+
+  "scripts": {
+    "start": "nodemon server.js --exec babel-node"
+  }
+}
