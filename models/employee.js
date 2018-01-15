@@ -68,7 +68,7 @@ export default (sequelize, DataType) => {
     });
 
     Employee.associate = (models) => {
-        //models.Employee.hasMany(models.Employee, {as: 'reportesToEmployees', foreignKey: 'ReportsTo'});
+        models.Employee.hasMany(models.Employee, {as: 'reportesToEmployees', foreignKey: 'ReportsTo'});
     }
 
     return Employee;

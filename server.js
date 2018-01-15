@@ -5,7 +5,7 @@ import { graphqlKoa, graphiqlKoa } from 'apollo-server-koa';
 
 import Schema from './schema';
 
-const APP_PORT = 3000;
+const APP_PORT = 9000;
 
 const app = new koa();
 const router = new koaRouter();

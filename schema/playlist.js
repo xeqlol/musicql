@@ -6,6 +6,8 @@ import {
     GraphQLSchema
 } from 'graphql';
 
+import Track from './track';
+
 const Playlist = new GraphQLObjectType({
     name: 'Playlist',
     description: 'Playlist',
@@ -14,11 +16,15 @@ const Playlist = new GraphQLObjectType({
         return {
             playlistId: {
                 type: GraphQLInt,
-                resolve: (playlist) => playlist.playlistId
+                resolve: playlist => playlist.playlistId
             },
             name: {
                 type: GraphQLString,
-                resolve: (playlist) => playlist.name
+                resolve: playlist => playlist.name
+            },
+            tracks: {
+                type: new GraphQLList(Track),
+                resolve: playlist => playlist.getTracks()
             }
         }
     }
