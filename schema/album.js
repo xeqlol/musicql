@@ -8,6 +8,7 @@ import {
 } from 'graphql';
 
 import Track from './track';
+import Artist from './artist';
 
 const Album = new GraphQLObjectType({
     name: 'Album',
@@ -30,6 +31,10 @@ const Album = new GraphQLObjectType({
             tracks: {
                 type: new GraphQLList(Track),
                 resolve: album => album.getTracks()
+            },
+            artist: {
+                type: Artist,
+                resolve: album => album.getArtist()
             }
         }
     }

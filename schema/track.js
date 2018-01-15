@@ -20,55 +20,55 @@ const Track = new GraphQLObjectType({
         return {
             trackId: {
                 type: GraphQLInt,
-                resolve: (track) => track.trackId
+                resolve: track => track.trackId
             },
             name: {
                 type: GraphQLString,
-                resolve: (track) => track.name
+                resolve: track => track.name
             },
             albumId: {
                 type: GraphQLInt,
-                resolve: (track) => track.albumId
+                resolve: track => track.albumId
             },
             mediaTypeId: {
                 type: GraphQLInt,
-                resolve: (track) => track.mediaTypeId
+                resolve: track => track.mediaTypeId
             },
             genreId: {
                 type: GraphQLInt,
-                resolve: (track) => track.genreId
+                resolve: track => track.genreId
             },
             composer: {
                 type: GraphQLString,
-                resolve: (track) => track.composer
+                resolve: track => track.composer
             },
             milliseconds: {
                 type: GraphQLInt,
-                resolve: (track) => track.milliseconds
+                resolve: track => track.milliseconds
             },
             bytes: {
                 type: GraphQLInt,
-                resolve: (track) => track.bytes
+                resolve: track => track.bytes
             },
             unitPrice: {
                 type: GraphQLFloat,
-                resolve: (track) => track.unitPrice
+                resolve: track => track.unitPrice
             },
             mediaType: {
                 type: MediaType,
-                resolve: (track) => track.getMediaType()
+                resolve: track => track.getMediaType()
             },
             genre: {
                 type: Genre,
-                resolve: (track) => track.getGenre()
+                resolve: track => track.getGenre()
             },
             album: {
                 type: Album,
-                resolve: (track) => track.getAlbum()
+                resolve: track => track.getAlbum()
             },
             playlists: {
                 type: new GraphQLList(Playlist),
-                resolve: (track) => track.getPlaylists()
+                resolve: track => track.getPlaylists()
             }
         }
     }

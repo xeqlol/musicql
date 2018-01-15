@@ -20,7 +20,7 @@ export default (sequelize, DataType) => {
     });
 
     Album.associate = (models) => {
-        models.Album.belongsTo(models.Artist, {foreignKey: 'ArtistId'})
+        models.Album.belongsTo(models.Artist, {foreignKey: 'ArtistId'});
         models.Album.hasMany(models.Track, {foreignKey: 'albumId'});
     }
 
